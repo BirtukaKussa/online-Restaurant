@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Details</title>
+</head>
+
+<body>
+    <h1>Image Details Page</h1>
+    <div id="imageDetails"></div>
+
+    <script>
+        // Retrieve image details from query parameter
+        const searchParams = new URLSearchParams(window.location.search);
+        const image = searchParams.get('image');
+
+        // Display image details
+        const imageDetailsElement = document.getElementById('imageDetails');
+        imageDetailsElement.innerHTML = `
+            <img src=".../" alt="Image">
+            
+            <p>Additional information about the image goes here.</p>
+        `;
+    </script>
+</body>
+
+</html>
